@@ -444,7 +444,7 @@
                         <td style="width: 80px;"><input type="text" name="attr_wep1critrang" title="wep1crtirang" value="19-20"></td>
                         <td><input type="number" name="attr_wep1critmult" title="wep1critmult" value="0"></td>
                         <td style="width: 50px;"><button type="roll" name="attr_wep1attackroll" title="wep1attackroll" value="/em attacks with @{weapon1} hitting AC [[1d20+@{wep1enh}+@{wep1foc}+@{wep1attacktype} +?{Flank (1=yes)|0}*2 +?{Power Attack? (use negative sign i.e. -3|0}+?{Additional Hit Modifier?|0}]]"/></td>
-                        <td style="width: 50px;"><button type="roll" name="attr_wep1dmgroll" title="wep1dmgroll" value="/em @{weapon1} Damage AC [[@{wep1dmg}+@{wep1enh}+@{wep1spc}+@{wep1dmgstat} +?{Power Attack?|0}+?{Additional Damage Modifier?|0}]]"/></td>
+                        <td style="width: 50px;"><button type="roll" name="attr_wep1dmgroll" title="wep1dmgroll" value="/em @{weapon1} Damage [[@{wep1dmg}+@{wep1enh}+@{wep1spc}+@{wep1dmgstat} +?{Power Attack?|0}+?{Additional Damage Modifier?|0}]]"/></td>
                         <td><button type="roll" name="attr_wep1critdmgroll" title="wep1critdmgroll" value="/em @{weapon1} Critical Damage [[(@{wep1dmg}+@{wep1enh}+@{wep1spc}+@{wep1dmgstat} +?{Power Attack?|0}+?{Additional Damage Modifier?|0})*@{wep1critmult}]]"></button></td>
                     </tr>
                     <tr>
@@ -502,7 +502,7 @@
                         <td style="width: 80px;"><input type="text" name="attr_wep2critrang" title="wep2crtirang" value="19-20"></td>
                         <td><input type="number" name="attr_wep2critmult" title="wep2critmult" value="0"></td>
                         <td style="width: 50px;"><button type="roll" name="attr_wep2attackroll" title="wep2attackroll" value="/em attacks with @{weapon2} hitting AC [[1d20+@{wep2enh}+@{wep2foc}+@{wep2attacktype} +?{Flank (1=yes)|0}*2 +?{Power Attack? (use negative sign i.e. -3|0}+?{Additional Hit Modifier?|0}]]"/></td>
-                        <td style="width: 50px;"><button type="roll" name="attr_wep2dmgroll" title="wep2dmgroll" value="/em @{weapon2} damage [[@{wep2dmg}+@{wep2enh}+@{wep2spc}+@{wep2dmgstat} +?{Power Attack?|0}+?{Additional Damage Modifier?|0}]]"/></td>
+                        <td style="width: 50px;"><button type="roll" name="attr_wep2dmgroll" title="wep2dmgroll" value="/em @{weapon2} Damage [[@{wep2dmg}+@{wep2enh}+@{wep2spc}+@{wep2dmgstat} +?{Power Attack?|0}+?{Additional Damage Modifier?|0}]]"/></td>
                         <td><button type="roll" name="attr_wep2critdmgroll" title="wep2critdmgroll" value="/em @{weapon2} Critical Damage [[(@{wep2dmg}+@{wep2enh}+@{wep2spc}+@{wep2dmgstat} +?{Power Attack?|0}+?{Additional Damage Modifier?|0})*@{wep2critmult}]]"></button></td>
                     </tr>
                     <tr>
@@ -2278,22 +2278,22 @@
         <tr>
             <td>
                 <div style="float: left; width: 49%;">Description<br />
-                    <textarea  name="char_description" title="char_description" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
+                    <textarea  name="attr__description" title="description" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
                 </div>
                 <div style="float: right; width: 49%;">Personality<br />
-                    <textarea  name="char_personality" title="char_personality" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
+                    <textarea  name="attr__personality" title="personality" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
                 </div>
                 <div style="float: left; width: 49%;">Character Traits<br />
-                    <textarea  name="char_traits" title="char_traits" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
+                    <textarea  name="attr__traits" title="traits" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
                 </div>
                 <div style="float: right; width: 49%;">Character Flaws<br />
-                    <textarea  name="char_flaws" title="char_flaws" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
+                    <textarea  name="attr_flaws" title="flaws" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
                 </div>
                 <div style="float: left; width: 49%;">Contacts / Friends<br />
-                    <textarea  name="char_contacts" title="char_contacts" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
+                    <textarea  name="attr_contacts" title="contacts" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
                 </div>
                 <div style="float: right; width: 49%;">Enemies<br />
-                    <textarea  name="char_enemies" title="char_enemies" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
+                    <textarea  name="attr_enemies" title="enemies" style="width: 100%; height: 7.5em;text-align: left;" class="bordered"></textarea>
                 </div>
             </td>
         </tr>
@@ -2303,7 +2303,7 @@
             <td>Other Notes</td>
         </tr>
         <tr>
-            <td><textarea  name="char_traits" title="char_traits" style="width: 100%; height: 10em;text-align: left;" class="bordered"></textarea></td>
+            <td><textarea  name="attr_othernotes" title="othernotes" style="width: 100%; height: 10em;text-align: left;" class="bordered"></textarea></td>
         </tr>
     </table>
 </div>
