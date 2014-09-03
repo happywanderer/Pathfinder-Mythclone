@@ -106,7 +106,7 @@
             <td style="width: 40px;" ><input type="number"  name="attr_ActionPoints" title="ActionPoints" value="0" /></td>
         </tr>
         <tr>
-        	<td colspan="5" class="sheet-label">Caster Level</td>
+            <td colspan="5" class="sheet-label">Caster Level</td>
             <td style="width: 40px;" ><input type="number"   name="attr_CasterLevel" title="CasterLevel" value="0" /></td>
         </tr>
     </table>
@@ -200,9 +200,9 @@
               <td class="sheet-statlabel" style="width: 60px;">Flat-Footed<br>AC</td>
               <td><input type="text" name="attr_FlatFootAC" title="FlatFootAC" value="@{Armor-worn}+@{Shield-worn}+@{ACSize}+@{ACDef}+@{ACNat}+@{ACMisc}+10" disabled></td>
               <td class="sheet-statlabel" style="width: 60px;">CMD</td>
-              <td><input type="text" name="attr_CMD" title="CMD" value="(10+@{bab}+@{StrMod}+@{DexMod}+@{size})" disabled></td>
+              <td><input type="text" name="attr_CMD" title="CMD" value="(10+@{bab}+@{StrMod}+@{DexMod}+(@{size}*-1))" disabled></td>
               <td class="sheet-statlabel" style="width: 60px;">FCMD</td>
-              <td><input type="text" name="attr_FFCMD" title="FFCMD" value="(10+@{bab}+@{StrMod}+@{size})" disabled></td>
+              <td><input type="text" name="attr_FFCMD" title="FFCMD" value="(10+@{bab}+@{StrMod}+(@{size}*-1))" disabled></td>
           </tr>
         <table>
             <tr style="font-size: .75em;">
@@ -389,7 +389,7 @@
     </tr>
     <tr>
         <td class="sheet-label" style="width: 140px;font-size: 1em">CMB</td>
-        <td><input type="text" name="attr_tabcmb" title="tabcmb" value="@{bab}+@{cmbmod}+@{size}+@{cmbmisc}+@{cmbtemp}" disabled></td>
+        <td><input type="text" name="attr_tabcmb" title="tabcmb" value="@{bab}+@{cmbmod}+(@{size}*-1)+@{cmbmisc}+@{cmbtemp}" disabled></td>
         <td style="width: 25px;">=</td>
         <td style="width: 50px;"><input type="text" name="attr_babcmb" title="babcmb" value="@{bab}" disabled></td>
         <td style="width: 25px;">+</td>
@@ -402,7 +402,7 @@
             <option value="@{chamod}">Cha</option>
         </select></td>
         <td style="width: 25px;">+</td>
-        <td style="width: 50px;"><input type="text" name="attr_cmbsize" title="cmbsize" value="@{size}" disabled></td>
+        <td style="width: 50px;"><input type="text" name="attr_cmbsize" title="cmbsize" value="(@{size}*-1)" disabled></td>
         <td style="width: 25px;">+</td>
         <td><input type="number" name="attr_cmbmisc" title="cmbmisc" value="0"></td>
         <td style="width: 25px;">+</td>
@@ -814,7 +814,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td><button style="font-size:100%;" title="Appraise-Check" type="roll" value="@{character_name}'s Appraise check: [[1d20 + @{Appraise}]]" name="roll_Appraise-Check"></button></td>
-                                            			<td><input title="Appraise-cs" type="checkbox" name="attr_Appraise-cs" value="1" /></td>
+                                                		<td><input title="Appraise-cs" type="checkbox" name="attr_Appraise-cs" value="1" /></td>
                                             			<td style="font-size: 1.5em"><b>*</b></td>
                                             			<td style="text-align: left">Appraise</td>
                                             			<td><input title="Appraise" type="text" name="attr_Appraise" value="(@{Appraise-ranks} + @{IntMod} + @{Appraise-trained} + @{Appraise-misc})" disabled></td>
